@@ -1,36 +1,34 @@
-﻿Imports System
+Imports System
 Imports System.Configuration
 Imports System.Windows.Forms
 Imports DevExpress.ExpressApp.Security
 Imports DevExpress.ExpressApp.Xpo
 
 Namespace E2813.Demo.Win
-    Friend NotInheritable Class Program
 
-        Private Sub New()
-        End Sub
+    Friend Module Program
 
         ''' <summary>
         ''' The main entry point for the application.
         ''' </summary>
-        <STAThread> _
-        Shared Sub Main()
-#If EASYTEST Then
-            DevExpress.ExpressApp.Win.EasyTest.EasyTestRemotingRegistration.Register()
+        <STAThread>
+        Sub Main()
+#If EASYTEST
+            DevExpress.ExpressApp.Win.EasyTest.EasyTestRemotingRegistration.Register();
 #End If
-
-            Application.EnableVisualStyles()
+            Call Application.EnableVisualStyles()
             Application.SetCompatibleTextRenderingDefault(False)
             EditModelPermission.AlwaysGranted = System.Diagnostics.Debugger.IsAttached
-            Dim winApplication As New DemoUserViewVariantWindowsFormsApplication()
-#If EASYTEST Then
-            If ConfigurationManager.ConnectionStrings("EasyTestConnectionString") IsNot Nothing Then
-                winApplication.ConnectionString = ConfigurationManager.ConnectionStrings("EasyTestConnectionString").ConnectionString
-            End If
+            Dim winApplication As DemoUserViewVariantWindowsFormsApplication = New DemoUserViewVariantWindowsFormsApplication()
+#If EASYTEST
+			if(ConfigurationManager.ConnectionStrings["EasyTestConnectionString"] != null) {
+				winApplication.ConnectionString = ConfigurationManager.ConnectionStrings["EasyTestConnectionString"].ConnectionString;
+			}
 #End If
             If ConfigurationManager.ConnectionStrings("ConnectionString") IsNot Nothing Then
                 winApplication.ConnectionString = ConfigurationManager.ConnectionStrings("ConnectionString").ConnectionString
             End If
+
             winApplication.ConnectionString = InMemoryDataStoreProvider.ConnectionString
             Try
                 winApplication.Setup()
@@ -39,5 +37,5 @@ Namespace E2813.Demo.Win
                 winApplication.HandleException(e)
             End Try
         End Sub
-    End Class
+    End Module
 End Namespace

@@ -1,5 +1,7 @@
-﻿Namespace E2813.Demo.Win
-    Partial Public Class DemoUserViewVariantWindowsFormsApplication
+Namespace E2813.Demo.Win
+
+    Partial Class DemoUserViewVariantWindowsFormsApplication
+
         ''' <summary> 
         ''' Required designer variable.
         ''' </summary>
@@ -10,14 +12,14 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Component Designer generated code"
-
+'#Region "Component Designer generated code"
         ''' <summary> 
         ''' Required method for Designer support - do not modify 
         ''' the contents of this method with the code editor.
@@ -34,7 +36,7 @@
             Me.authenticationActiveDirectory1 = New DevExpress.ExpressApp.Security.AuthenticationActiveDirectory()
             Me.sqlConnection1 = New System.Data.SqlClient.SqlConnection()
             Me.viewVariantsModule1 = New DevExpress.ExpressApp.ViewVariantsModule.ViewVariantsModule()
-            CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me), System.ComponentModel.ISupportInitialize).BeginInit()
             ' 
             ' module5
             ' 
@@ -73,22 +75,31 @@
             Me.Modules.Add(Me.module6)
             Me.Modules.Add(Me.securityModule1)
             Me.Security = Me.securitySimple1
-            CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
-
+            AddHandler Me.DatabaseVersionMismatch, New System.EventHandler(Of DevExpress.ExpressApp.DatabaseVersionMismatchEventArgs)(AddressOf Me.E2813WindowsFormsApplication_DatabaseVersionMismatch)
+            CType((Me), System.ComponentModel.ISupportInitialize).EndInit()
         End Sub
 
-        #End Region
-
+'#End Region
         Private module1 As DevExpress.ExpressApp.SystemModule.SystemModule
+
         Private module2 As DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule
+
         Private module3 As UserViewVariants.UserViewVariantsModule
+
         Private module5 As DevExpress.ExpressApp.Validation.ValidationModule
+
         Private module6 As DevExpress.ExpressApp.Objects.BusinessClassLibraryCustomizationModule
+
         Private module7 As DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule
+
         Private securityModule1 As DevExpress.ExpressApp.Security.SecurityModule
+
         Private securitySimple1 As DevExpress.ExpressApp.Security.SecuritySimple
+
         Private authenticationActiveDirectory1 As DevExpress.ExpressApp.Security.AuthenticationActiveDirectory
+
         Private sqlConnection1 As System.Data.SqlClient.SqlConnection
+
         Private viewVariantsModule1 As DevExpress.ExpressApp.ViewVariantsModule.ViewVariantsModule
     End Class
 End Namespace
