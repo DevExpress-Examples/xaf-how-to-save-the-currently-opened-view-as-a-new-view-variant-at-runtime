@@ -14,7 +14,7 @@ To accomplish this task we created a dedicated [controller](CS/EF/ViewVariantSav
 
 ## Files to Review
 
-- **[UserViewVariantsController.cs](CS/EF/ViewVariantSaveEF/ViewVariantSaveEF.Module/Controllers/UserViewVariantsController.cs) **
+- [UserViewVariantsController.cs](CS/EF/ViewVariantSaveEF/ViewVariantSaveEF.Module/Controllers/UserViewVariantsController.cs) 
 - [ViewVariantParameterObject.cs](CS/EF/ViewVariantSaveEF/ViewVariantSaveEF.Module/BusinessObjects/ViewVariantParameterObject.cs)
 
 ## Documentation 
