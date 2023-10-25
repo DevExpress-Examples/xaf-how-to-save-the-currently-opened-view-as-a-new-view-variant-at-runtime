@@ -6,6 +6,7 @@
 
 # How to save the currently opened View as a new View Variant at runtime
 This example shows how to create a conntroller that allow to save the current view's state as a view variant and apply saved variants to a view:
+![image](https://github.com/DevExpress-Examples/XAF_how-to-save-the-currently-opened-view-as-a-new-view-variant-at-runtime-e2813/assets/14300209/8a27e54e-167e-4d5d-a46c-f0dc6e5da901)
 
 ## Implementation Details
 
