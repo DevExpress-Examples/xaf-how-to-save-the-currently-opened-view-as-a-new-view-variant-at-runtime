@@ -21,4 +21,7 @@
     <PackageReference Include="DevExpress.ExpressApp.CodeAnalysis" Version="23.1.6" />
     <PackageReference Include="DevExpress.ExpressApp.Validation.Blazor" Version="23.1.6" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ViewVariantSaveEF.Module\ViewVariantSaveEF.Module.csproj" />
+  </ItemGroup>
 </Project>

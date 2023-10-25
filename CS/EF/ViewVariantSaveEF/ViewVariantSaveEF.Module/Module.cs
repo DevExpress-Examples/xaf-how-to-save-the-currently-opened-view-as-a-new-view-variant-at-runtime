@@ -9,6 +9,7 @@ using DevExpress.ExpressApp.Updating;
 using DevExpress.ExpressApp.Model.Core;
 using DevExpress.ExpressApp.Model.DomainLogics;
 using DevExpress.ExpressApp.Model.NodeGenerators;
+using ViewVariantSaveEF.Module.DatabaseUpdate;
 
 namespace ViewVariantSaveEF.Module;
 
@@ -32,7 +33,7 @@ public sealed class ViewVariantSaveEFModule : ModuleBase {
     }
     public override IEnumerable<ModuleUpdater> GetModuleUpdaters(IObjectSpace objectSpace, Version versionFromDB) {
         ModuleUpdater updater = new DatabaseUpdate.Updater(objectSpace, versionFromDB);
-        return new ModuleUpdater[] { updater };
+        return new ModuleUpdater[] { updater, new MyUpdater(objectSpace, versionFromDB) };
     }
     public override void Setup(XafApplication application) {
         base.Setup(application);
