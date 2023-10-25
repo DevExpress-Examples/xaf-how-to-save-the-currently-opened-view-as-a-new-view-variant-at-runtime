@@ -6,11 +6,9 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [WebUserViewVariantsController.cs](./CS/UserViewVariants.Web/WebUserViewVariantsController.cs) (VB: [WebUserViewVariantsController.vb](./VB/UserViewVariants.Web/WebUserViewVariantsController.vb))
 
-* [Model.DesignedDiffs.xafml](./CS/UserViewVariants/Model.DesignedDiffs.xafml) (VB: [Model.DesignedDiffs.xafml](./VB/UserViewVariants/Model.DesignedDiffs.xafml))
-* **[UserViewVariantsController.cs](./CS/UserViewVariants/UserViewVariantsController.cs) (VB: [UserViewVariantsController.vb](./VB/UserViewVariants/UserViewVariantsController.vb))**
-* [ViewVariantParameterObject.cs](./CS/UserViewVariants/ViewVariantParameterObject.cs) (VB: [ViewVariantParameterObject.vb](./VB/UserViewVariants/ViewVariantParameterObject.vb))
+* **[UserViewVariantsController.cs](CS/EF/ViewVariantSaveEF/ViewVariantSaveEF.Module/Controllers/UserViewVariantsController.cs) **
+* [ViewVariantParameterObject.cs](CS/EF/ViewVariantSaveEF/ViewVariantSaveEF.Module/BusinessObjects/ViewVariantParameterObject.cs)
 <!-- default file list end -->
 # How to save the currently opened View as a new View Variant at runtime
 
