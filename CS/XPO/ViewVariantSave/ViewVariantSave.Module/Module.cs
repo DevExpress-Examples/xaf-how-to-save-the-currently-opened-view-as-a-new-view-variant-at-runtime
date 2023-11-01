@@ -38,7 +38,17 @@ public sealed class ViewVariantSaveModule : ModuleBase {
     }
     public override void Setup(XafApplication application) {
         base.Setup(application);
+        application.CreateCustomModelDifferenceStore += Application_CreateCustomModelDifferenceStore;
+        application.CreateCustomUserModelDifferenceStore += Application_CreateCustomUserModelDifferenceStore;
         // Manage various aspects of the application UI and behavior at the module level.
+    }
+    private void Application_CreateCustomModelDifferenceStore(Object sender, CreateCustomModelDifferenceStoreEventArgs e) {
+        e.Store = new ModelDifferenceDbStore((XafApplication)sender, typeof(ModelDifference), true, "Win");
+        e.Handled = true;
+    }
+    private void Application_CreateCustomUserModelDifferenceStore(Object sender, CreateCustomModelDifferenceStoreEventArgs e) {
+        e.Store = new ModelDifferenceDbStore((XafApplication)sender, typeof(ModelDifference), false, "Win");
+        e.Handled = true;
     }
     public override void CustomizeTypesInfo(ITypesInfo typesInfo) {
         base.CustomizeTypesInfo(typesInfo);
