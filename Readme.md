@@ -3,13 +3,15 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# How to save the currently opened View as a new View Variant at runtime
-This example shows how to create a conntroller that allow to save the current view's state as a view variant and apply saved variants to a view:
-![image](https://github.com/DevExpress-Examples/XAF_how-to-save-the-currently-opened-view-as-a-new-view-variant-at-runtime-e2813/assets/14300209/8a27e54e-167e-4d5d-a46c-f0dc6e5da901)
+# XAF - How to save the currently open View as a new View Variant at runtime
+
+This example shows how to create a controller that allows you to save the state of the current view as a view variant and apply saved variants to a view.
+
+<kbd>![image](https://github.com/DevExpress-Examples/XAF_how-to-save-the-currently-opened-view-as-a-new-view-variant-at-runtime-e2813/assets/14300209/8a27e54e-167e-4d5d-a46c-f0dc6e5da901)</kbd>
 
 ## Implementation Details
 
-To accomplish this task we created a dedicated [controller](CS/EF/ViewVariantSaveEF/ViewVariantSaveEF.Module/Controllers/UserViewVariantsController.cs) that stores a current view's state as a new view variant into an application's model. The same controller allows end-user to apply existing view variants to a view.
+To accomplish this task, we created a dedicated [controller](CS/EF/ViewVariantSaveEF/ViewVariantSaveEF.Module/Controllers/UserViewVariantsController.cs) that stores the state of a current view as a new view variant in an application model. The same controller allows users to apply existing view variants to a view.
 
 ## Files to Review
 
