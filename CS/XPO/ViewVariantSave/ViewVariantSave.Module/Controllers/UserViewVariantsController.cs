@@ -150,6 +150,9 @@ namespace UserViewVariants {
             }
             UpdateCurrentViewVariant(newViewVariantId); //Sets the current view variant to the newly created one.
             UpdateUserViewVariantsAction(); //Updates the items of our User View Variant Action based on the current the Change Variant Action structure. 
+            Application.SaveModelChanges();
+            var cnt = Frame.GetController<ShowNavigationItemController>();
+            cnt.RecreateNavigationItems();
         }
         protected virtual void DeleteViewVariant() { //This method does almost the same work as NewViewVariant, but in reverse order.
             VariantsInfo variantsInfo = GetVariantsInfo(); //You should not be able to remove the root view variant.
@@ -165,9 +168,10 @@ namespace UserViewVariants {
             if (rootModelViewVariants.Count == 1) {
                 rootModelViewVariants.ClearNodes();
             }
+            Application.SaveModelChanges();
             var cnt = Frame.GetController<ShowNavigationItemController>();
             cnt.RecreateNavigationItems();
-            Application.SaveModelChanges();
+           
         }
         protected virtual void EditViewVariant(ViewVariantParameterObject parameter) {
             VariantsInfo variantsInfo = GetVariantsInfo();
