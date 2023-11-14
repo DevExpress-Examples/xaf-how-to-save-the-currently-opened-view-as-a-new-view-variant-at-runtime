@@ -165,6 +165,9 @@ namespace UserViewVariants {
             if (rootModelViewVariants.Count == 1) {
                 rootModelViewVariants.ClearNodes();
             }
+            var cnt = Frame.GetController<ShowNavigationItemController>();
+            cnt.RecreateNavigationItems();
+            Application.SaveModelChanges();
         }
         protected virtual void EditViewVariant(ViewVariantParameterObject parameter) {
             VariantsInfo variantsInfo = GetVariantsInfo();
