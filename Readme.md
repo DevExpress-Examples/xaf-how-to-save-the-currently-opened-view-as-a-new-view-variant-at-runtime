@@ -3,21 +3,22 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E2813)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
 
+# XAF - How to save the currently open View as a new View Variant at runtime
 
-* **[UserViewVariantsController.cs](CS/EF/ViewVariantSaveEF/ViewVariantSaveEF.Module/Controllers/UserViewVariantsController.cs) **
-* [ViewVariantParameterObject.cs](CS/EF/ViewVariantSaveEF/ViewVariantSaveEF.Module/BusinessObjects/ViewVariantParameterObject.cs)
-<!-- default file list end -->
-# How to save the currently opened View as a new View Variant at runtime
+This example shows how to create a controller that allows you to save the state of the current view as a view variant and apply saved variants to a view.
 
+<kbd>![image](https://github.com/DevExpress-Examples/XAF_how-to-save-the-currently-opened-view-as-a-new-view-variant-at-runtime-e2813/assets/14300209/8a27e54e-167e-4d5d-a46c-f0dc6e5da901)</kbd>
 
-<p>This example provides reusable UserViewVariants modules that allow your end-users to add View Variants dynamically. Refer to the <a href="http://community.devexpress.com/blogs/eaf/archive/2011/07/04/best-practices-of-creating-reusable-xaf-modules-by-example-of-a-view-variants-module-extension.aspx"><u>Best practices of creating reusable XAF modules by example of a View Variants module extension</u></a> blog post for more information. See functional tests for the implemented functionality in the <em>UserViewVariants\Functional Tests\E2813.ets</em> file.</p>
-<p><strong><br>IMPORTANT NOTES<br></strong>Due to the <u><a href="http://documentation.devexpress.com/#Xaf/CustomDocument2580">application model generation specifics on the Web</a></u> it makes sense to use this solution on the Web only if you store your end-user model differences in the database: <a href="https://www.devexpress.com/Support/Center/p/K18137">How to store users' model differences separately for each user in the database</a>.<strong><br></strong></p>
-<p><strong><br>See also:</strong></p>
-<p><a href="https://www.devexpress.com/Support/Center/p/T537863">How to save and share custom view settings</a></p>
+## Implementation Details
 
-<br/>
+To accomplish this task, we created a dedicated [controller](CS/EF/ViewVariantSaveEF/ViewVariantSaveEF.Module/Controllers/UserViewVariantsController.cs) that stores the state of a current view as a new view variant in an application model. The same controller allows users to apply existing view variants to a view.
 
+## Files to Review
 
+- [UserViewVariantsController.cs](CS/EF/ViewVariantSaveEF/ViewVariantSaveEF.Module/Controllers/UserViewVariantsController.cs) 
+- [ViewVariantParameterObject.cs](CS/EF/ViewVariantSaveEF/ViewVariantSaveEF.Module/BusinessObjects/ViewVariantParameterObject.cs)
+
+## Documentation 
+- [View Variants (Switch Document Layouts)](https://docs.devexpress.com/eXpressAppFramework/113011/application-shell-and-base-infrastructure/view-variants-module)
+- [Application Model (UI Settings Storage)](https://docs.devexpress.com/eXpressAppFramework/112579/ui-construction/application-model-ui-settings-storage)
