@@ -2,6 +2,7 @@
 ![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/128592731/23.1.6%2B)
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E2813)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
+[![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
 
 # XAF - How to save the currently open View as a new View Variant at runtime
@@ -28,3 +29,10 @@ To accomplish this task, we created a dedicated [controller](CS/EF/ViewVariantSa
 ## Documentation 
 - [View Variants (Switch Document Layouts)](https://docs.devexpress.com/eXpressAppFramework/113011/application-shell-and-base-infrastructure/view-variants-module)
 - [Application Model (UI Settings Storage)](https://docs.devexpress.com/eXpressAppFramework/112579/ui-construction/application-model-ui-settings-storage)
+<!-- feedback -->
+## Does this example address your development requirements/objectives?
+
+[<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=xaf-how-to-save-the-currently-opened-view-as-a-new-view-variant-at-runtime&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=xaf-how-to-save-the-currently-opened-view-as-a-new-view-variant-at-runtime&~~~was_helpful=no)
+
+(you will be redirected to DevExpress.com to submit your response)
+<!-- feedback end -->
