@@ -21,7 +21,6 @@ public class ViewVariantSaveEFWindowsFormsApplication : WinApplication {
 		SplashScreen = new DXSplashScreen(typeof(XafSplashScreen), new DefaultOverlayFormOptions());
         ApplicationName = "ViewVariantSaveEF";
         CheckCompatibilityType = DevExpress.ExpressApp.CheckCompatibilityType.DatabaseSchema;
-        UseOldTemplates = false;
         DatabaseVersionMismatch += ViewVariantSaveEFWindowsFormsApplication_DatabaseVersionMismatch;
         CustomizeLanguagesList += ViewVariantSaveEFWindowsFormsApplication_CustomizeLanguagesList;
     }
