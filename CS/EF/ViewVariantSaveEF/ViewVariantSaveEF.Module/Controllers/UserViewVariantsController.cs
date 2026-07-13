@@ -145,7 +145,8 @@ namespace UserViewVariants {
                 currentModelViewVariant.Caption = CaptionHelper.GetLocalizedText("Texts", "DefaultViewVariantCaption");
                 currentModelViewVariant.View = View.Model;
             }
-            if(changeVariantController != null) {
+            ((ModelNode)((IModelViewVariants)newModelViewVariant.View).Variants).Undo(); //Clears the "Variants" node of the newly created View Variant to avoid copying the View Variants of the current View to the new View Variant.
+            if (changeVariantController != null) {
                 changeVariantController.CurrentFrameViewVariantsManager.RefreshVariants(); //Updates the Change Variant Action structure based on the model customizations above.
             }
             UpdateCurrentViewVariant(newViewVariantId); //Sets the current view variant to the newly created one.
